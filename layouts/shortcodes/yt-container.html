@@ -1,0 +1,27 @@
+<!-- layouts/shortcodes/youtube.html -->
+{{- $pc := .Page.Site.Config.Privacy.YouTube -}}
+{{- if not $pc.Disable -}}
+{{- $id := .Get 0 | default (.Get "id") -}}
+{{- $title := .Get "title" | default "YouTube Video" }}
+{{- $class := .Get "class" | default "video-container" }}
+{{/* Determine the embed URL */}}
+{{- $embedUrlBase := "https://www.youtube.com/embed/" -}}
+{{- if $pc.PrivacyEnhanced -}}
+    {{- $embedUrlBase = "https://www.youtube-nocookie.com/embed/" -}}
+{{- end -}}
+{{- $embedUrl := printf "%s%s" $embedUrlBase $id -}}
+
+{{ if $id }}
+<div class="{{ $class }}">
+    <iframe
+        src="{{ $embedUrl | safeURL }}"
+        title="{{ $title }}"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+    </iframe>
+</div>
+{{ else }}
+{{ errorf "YouTube shortcode requires a video ID. Usage: {{< youtube VIDEO_ID >}} or {{< youtube id=\"VIDEO_ID\" >}}" }}
+{{ end }}
+{{- end -}}

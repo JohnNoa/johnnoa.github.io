@@ -1,0 +1,15 @@
+<!-- layouts/shortcodes/button.html -->
+{{/* Get parameters, provide defaults */}}
+{{ $href := .Get "href" | default "#" }}
+{{ $text := .Get "text" | default "Click Here" }}
+{{ $target := .Get "target" | default "_blank" }}
+{{ $rel := .Get "rel" | default "noopener noreferrer" }}
+{{ $class := .Get "class" | default "button-link" }}
+{{ $download := .Get "download" }} {{/* Only add if provided */}}
+
+<a href="{{ $href | safeURL }}"
+   class="{{ $class }}"
+   {{ with $target }}target="{{ . }}"{{ end }}
+   {{ if eq $target "_blank" }}rel="{{ $rel }}"{{ end }}
+   {{ with $download }}download{{ if ne . "true" }}="{{ . }}"{{ end }}{{ end }}
+   >{{ $text | markdownify }}</a>

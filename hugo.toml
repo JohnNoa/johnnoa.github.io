@@ -1,0 +1,82 @@
+baseURL = "http://localhost:1313/" # IMPORTANT: Set this correctly LATER for deployment
+languageCode = "en-us"
+theme = "terminal" # Tells Hugo to use this theme
+pagination.pagerSize = 5
+
+# Required for Chroma syntax highlighting used by the theme
+[markup.highlight]
+  noClasses = false
+
+[params]
+  # Set the directory where your main content lives (e.g., projects, posts)
+  contentTypeName = "projects" # Change "posts" to "projects" if your content is in `content/projects/`
+
+  # How many menu items to show before collapsing into 'More'
+  showMenuItems = 2 # Adjust as needed
+
+  # Show language switcher? (Likely false for a personal portfolio)
+  showLanguageSelector = false
+
+  # Theme layout style
+  fullWidthTheme = false
+  centerTheme = true # Usually good defaults
+
+  # Automatically use cover.(jpg|png|webp) in page resource folder as cover image?
+  autoCover = true
+
+  # Show 'Last Updated' info from Git? Requires enableGitInfo = true (see below)
+  showLastUpdated = true
+
+  # Show estimated reading time?
+  readingTime = true # Or false
+
+  # Show Table of Contents? Can be overridden per page
+  Toc = false # Or false
+  # TocTitle = "Table of Contents" # Default
+
+  # Date format for posts (Go language format string)
+  dateFormat = "2006-01-02" # Example: "Jan 2, 2006"
+
+  [languages]
+  [languages.en]
+    languageName = "English"
+    title = "JohnNoa-Dev"
+
+    [languages.en.params]
+      subtitle = "Welcome Traveler"
+      owner = ""
+      keywords = ""
+      copyright = ""
+      menuMore = "Show more"
+      readMore = "Read more"
+      seeOtherProjects = "See other projects"
+      newerProjects = "Newer projects"
+      olderProjects = "Older projects"
+      missingContentMessage = "Page not found..."
+      missingBackButtonLabel = "Back to home page"
+      minuteReadingTime = "min read"
+      words = "words"
+
+      [languages.en.params.logo]
+        logoText = "JohnNoa-Dev"
+        logoHomeLink = "/"
+
+      [languages.en.menu]
+        [[languages.en.menu.main]]
+          identifier = "about"
+          name = "About"
+          url = "/about"
+        [[languages.en.menu.main]]
+          identifier = "projects"
+          name = "Projects"
+          url = "/projects"
+        [[languages.en.menu.main]]
+          identifier = "contact"
+          name = "Contact"
+          url = "/contact"
+
+  # Add other params mentioned in the README or exampleSite config as needed
+  # Like owner, keywords, copyright, logoText, logoHomeLink etc. (See Page 6 for language specific ones)
+
+# Enable Git Info if you want to use 'showLastUpdated = true'
+enableGitInfo = true # Set to true if you want git-based last updated dates
