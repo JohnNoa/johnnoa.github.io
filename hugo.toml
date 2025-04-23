@@ -1,4 +1,4 @@
-baseURL = "http://localhost:1313/" # IMPORTANT: Set this correctly LATER for deployment
+baseURL = "http://johnnoa.github.io/" # IMPORTANT: Set this correctly LATER for deployment
 languageCode = "en-us"
 theme = "terminal" # Tells Hugo to use this theme
 pagination.pagerSize = 5
