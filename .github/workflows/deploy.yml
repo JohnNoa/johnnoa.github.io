@@ -31,7 +31,7 @@ jobs:
   build:
     runs-on: ubuntu-latest # Use the latest ubuntu runner
     env:
-      HUGO_VERSION: 0.119.0 # Specify the Hugo version you are using locally (check with `hugo version`)
+      HUGO_VERSION: 0.144.2 # Specify the Hugo version you are using locally (check with `hugo version`)
     steps:
       - name: Install Hugo CLI
         run: |
