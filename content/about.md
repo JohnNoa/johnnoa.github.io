@@ -49,5 +49,5 @@ Welcome to my humble workshop. I love building things. The process of creating a
 ### My Resume
 I'm currently seeking opportunities where I can leverage my diverse skillset to contribute to meaningful projects.
 
-[Link to my Resume (PDF)](/res/doc/JohnNoah.CV.2025.pdf)
+[Examine CV](/res/doc/JohnNoah.CV.2025.pdf)
 {{< /greater-bordered-section >}}
