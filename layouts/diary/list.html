@@ -1,0 +1,91 @@
+{{ define "main" }} {{/* Define the main content block */}}
+
+<article class="post">
+  <header class="post-header">
+    {{/* Use the section title, or default */}}
+    <h1 class="post-title">{{ "Logs" }}</h1>
+  </header>
+
+  {{/* Optional: Add introductory content from content/diary/_index.md if it exists */}}
+  {{ with .Content }}
+    <section class="post-content">
+      {{ . }}
+    </section>
+  {{ end }}
+
+  {{/* --- Timeline Navigation --- */}}
+  {{ $pages := .Pages.ByDate }} {{/* Get pages sorted chronologically */}}
+  {{ if $pages }}
+  <nav class="timeline-nav" aria-label="Diary timeline">
+    <h2 class="timeline-nav-title">Timeline</h2>
+    {{/* Group pages by year first */}}
+    {{ range $pages.GroupByDate "2006" }}
+      <section class="timeline-year">
+        <h3 class="timeline-year-header">{{ .Key }}</h3>
+        <ol class="timeline-months">
+          {{/* Group pages within the year by month */}}
+          {{ range .Pages.GroupByDate "January" }} {{/* Group by Month name */}}
+            <li class="timeline-month">
+              <h4 class="timeline-month-header">{{ .Key }}</h4>
+              <ol type="1" class="timeline-entries">
+                {{/* List individual entries for that month */}}
+                {{ range .Pages }}
+                  <li class="timeline-entry">
+                    {{/* Link to the specific post */}}
+                    <a href="{{ .RelPermalink }}">
+                      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2" }}</time>: {{ .Title }}
+                    </a>
+                  </li>
+                {{ end }}
+              </ol>
+            </li>
+          {{ end }}
+        </ol>
+      </section>
+    {{ end }}
+  </nav>
+  {{ end }} {{/* End if $pages */}}
+
+
+  {{/* --- Main Diary Entry List (Reverse Chronological) --- */}}
+  {{ $paginator := .Paginate .Pages.ByDate.Reverse }} {{/* Paginate reverse chronological */}}
+  <section class="diary-list">
+    <h2 class="diary-list-title">Entries</h2>
+    {{ range $paginator.Pages }}
+      <article class="diary-entry {{ if .Params.featured_image }}has-image{{ end }}">
+        <header>
+          <h3 class="diary-entry-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+          <div class="diary-entry-meta">
+            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+            {{ with .Params.tags }}
+              <span class="diary-tags"> | Tags:
+              {{ range . }}
+                <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}/">{{ . }}</a>
+              {{ end }}
+              </span>
+            {{ end }}
+            {{/* Optional Reading Time */}}
+            <!-- | <span>{{ .ReadingTime }} min read</span> -->
+          </div>
+        </header>
+        {{ with .Params.featured_image }}
+          <div class="diary-entry-image">
+            <a href="{{ $.RelPermalink }}"><img src="{{ . | relURL }}" alt="{{ $.Title }} featured image"></a>
+          </div>
+        {{ end }}
+        <section class="diary-entry-summary">
+          {{ .Summary }}
+        </section>
+        {{ if .Truncated }}
+        <a class="read-more button-link" href="{{ .RelPermalink }}">Read More</a>
+        {{ end }}
+      </article>
+    {{ end }}
+  </section>
+
+  {{/* Include pagination controls */}}
+  {{ partial "pagination.html" . }}
+
+</article>
+
+{{ end }} {{/* End define "main" */}}
