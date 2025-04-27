@@ -475,3 +475,153 @@ h1, h2, h3, h4, h5, h6 {
   /* Option A: Use the theme's main foreground color variable */
   color: var(--background);
 }
+
+h2 {
+  text-align: center;
+}
+
+/* --- Timeline Navigation Styles --- */
+.timeline-nav {
+  margin: 3em 0;
+  padding: 1.5em;
+  border: 1px solid var(--accent); /* Example border */
+  border-radius: var(--radius);
+  background-color: rgba(0, 0, 0, 0.1); /* Subtle background */
+}
+
+.timeline-nav-title {
+  margin-top: 0;
+  margin-bottom: 1.5em;
+  text-align: center;
+  color: var(--accent); /* Or var(--foreground) */
+}
+
+.timeline-year {
+  margin-bottom: 1.5em;
+}
+
+.timeline-year-header {
+  margin-bottom: 0.5em;
+  font-size: 1.2em;
+  color: var(--background); /* Adjust as needed */
+}
+
+.timeline-months {
+  list-style: none;
+  padding-left: 1em; /* Indent months slightly */
+  margin-left: 0; /* Override default ul margin */
+}
+
+.timeline-month {
+  margin-bottom: 1em;
+}
+
+.timeline-month-header {
+  font-size: 1.1em;
+  margin-bottom: 0.3em;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--background); /* Adjust as needed */
+}
+
+.timeline-entries {
+  list-style: square; /* Remove default bullets */
+  padding-left: 1.5em; /* Indent entries */
+  margin-left: 0;
+}
+
+.timeline-entry {
+  margin-bottom: 0.25em;
+}
+
+.timeline-entry time {
+  /* Style the date part */
+  font-weight: bold;
+  color: var(--foreground-muted, #ccc); /* Lighter color for date */
+  display: inline-block;
+  width: 5em; /* Align titles roughly */
+}
+
+.timeline-entry a {
+  text-decoration: none;
+  color: var(--accent); /* Or var(--accent) */
+  transition: color 0.2s ease;
+}
+
+.timeline-entry a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+
+/* --- Diary List Styles --- */
+.diary-list {
+  margin-top: 3em;
+}
+
+.diary-list-title {
+  margin: 3em 0;
+  padding: 1.5em;
+  border: 1px solid var(--accent); /* Example border */
+  border-radius: var(--radius);
+  background-color: rgba(0, 0, 0, 0.1); /* Subtle background */
+  margin-bottom: 1.5em;
+  color: var(--accent); /* Match timeline title */
+  text-align: center;
+}
+
+.diary-entry {
+  border: 1px solid var(--foreground-muted, #555); /* Subtle border */
+  border-radius: var(--radius);
+  padding: 1.5em;
+  margin-bottom: 2.5em;
+  background-color: rgba(0, 0, 0, 0.05); /* Very subtle background */
+}
+
+.diary-entry-title {
+  margin-top: 0;
+  margin-bottom: 0.25em;
+}
+
+.diary-entry-title a {
+  text-decoration: none;
+  color: var(--background);
+}
+.diary-entry-title a:hover {
+  text-decoration: underline;
+}
+
+
+.diary-entry-meta {
+  font-size: 0.9em;
+  color: var(--foreground-muted, #aaa);
+  margin-bottom: 1em;
+}
+
+.diary-entry-meta time {
+  margin-right: 0.5em;
+}
+.diary-entry-meta .diary-tags a {
+  color: inherit; /* Inherit muted color */
+  text-decoration: none;
+  border-bottom: 1px dotted var(--foreground-muted, #aaa);
+  margin-left: 0.3em;
+}
+.diary-entry-meta .diary-tags a:hover {
+  color: var(--accent);
+  border-bottom-style: solid;
+}
+
+.diary-entry-summary {
+  margin-bottom: 1em;
+}
+.diary-entry-summary p:last-child {
+  margin-bottom: 0; /* Avoid extra space before read more */
+}
+
+.read-more.button-link {
+  /* Inherits from .button-link */
+  /* Add specific tweaks if needed */
+  padding: 3px 12px; /* Slightly smaller? */
+  font-size: 0.9em;
+}
