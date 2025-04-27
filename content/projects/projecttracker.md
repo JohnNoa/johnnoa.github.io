@@ -11,7 +11,7 @@ Toc: false
 
 ### Stay on top of things.
 
-![Screenshot of Project Alpha](/res/img/ProjectTracker-Screenshot.PNG "Main Interface Screenshot")
+![Screenshot of Project Alpha](/res/img/ProjectTracker-Screenshot.jpg "Main Interface Screenshot")
 
 ### Watch Demo:
 {{< yt-container id="r3RtaS9o98k" title="Demo Walkthrough" >}}
