@@ -1,7 +1,7 @@
 ---
 title: "Log[#1]" # Generates title from filename
 date: 2025-04-25T20:31:24+03:00 # Sets the date of creation - CRUCIAL for timeline
-draft: true # Start as draft
+draft: false # Start as draft
 summary: "A brief summary of this diary entry..." # Optional but useful for list views
 tags: ["Genesis", "Development"] # Example tags
 # Add any other custom front matter you might want, e.g.:
