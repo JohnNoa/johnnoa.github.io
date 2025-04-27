@@ -1,7 +1,7 @@
 baseURL = "http://johnnoa.github.io/" # IMPORTANT: Set this correctly LATER for deployment
 languageCode = "en-us"
 theme = "terminal" # Tells Hugo to use this theme
-pagination.pagerSize = 10
+pagination.pagerSize = 5
 
 # Required for Chroma syntax highlighting used by the theme
 [markup.highlight]
@@ -12,7 +12,7 @@ pagination.pagerSize = 10
   contentTypeName = "projects" # Change "posts" to "projects" if your content is in `content/projects/`
 
   # How many menu items to show before collapsing into 'More'
-  showMenuItems = 3 # Adjust as needed
+  showMenuItems = 2 # Adjust as needed
 
   # Show language switcher? (Likely false for a personal portfolio)
   showLanguageSelector = false
@@ -66,22 +66,14 @@ pagination.pagerSize = 10
           identifier = "about"
           name = "About"
           url = "/about"
-          weight = 10
         [[languages.en.menu.main]]
           identifier = "projects"
           name = "Projects"
           url = "/projects"
-          weight = 20
-        [[languages.en.menu.main]]
-          identifier = "diary"
-          name = "[Dev]::{Log}"
-          url = "/diary"
-          weight = 30
         [[languages.en.menu.main]]
           identifier = "contact"
           name = "Contact"
           url = "/contact"
-          weight = 40
 
   # Add other params mentioned in the README or exampleSite config as needed
   # Like owner, keywords, copyright, logoText, logoHomeLink etc. (See Page 6 for language specific ones)
