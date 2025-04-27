@@ -6,7 +6,7 @@ Toc: False
 # Add theme-specific fields if needed (e.g., profile_image: "/images/profile.jpg")
 ---
 
-![JohnNoa Profile Picture](/res/img/Ya-Boi.png)
+![JohnNoa Profile Picture](/res/img/Ya-Boi.jpg)
 
 {{< bordered-section >}}
 *Salutations! 
