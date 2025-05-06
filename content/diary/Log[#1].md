@@ -14,7 +14,7 @@ So it begins... An official record of my software development journey.
 <!-- Optional: Use Hugo's summary divider -->
 <!--more-->
 
-Inasmuch as substantial ground has been covered prior to this, I hope you can tag along, there's still a lot more to discover.
+**Inasmuch as** substantial ground has been covered, I invite you to tag along, there's much more to **discover**.
 
 ### What To Expect:
 
