@@ -9,12 +9,9 @@ tags: ["Genesis", "Development"] # Example tags
 # featured_image: "/images/diary/entry-image.jpg"
 ---
 
-So it begins... An official record of my software development journey. 
+**Welcome** to the blog section. The **TL** of the **DR**. 
 
-<!-- Optional: Use Hugo's summary divider -->
 <!--more-->
-
-**Inasmuch as** substantial ground has been covered, I invite you to tag along, there's much more to **discover**.
 
 ### What To Expect:
 
