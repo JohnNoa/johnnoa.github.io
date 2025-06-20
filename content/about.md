@@ -49,3 +49,4 @@ Welcome to my humble workshop. I love building things. The process of creating a
 ### Addendum
 I'm currently seeking opportunities where I can leverage my diverse skillset to contribute to meaningful projects.
 **{{< pagelink "contact" "Reach out" >}}** if interested.
+{{< /greater-bordered-section >}}
