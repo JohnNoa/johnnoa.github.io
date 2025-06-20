@@ -44,9 +44,9 @@ Welcome to my humble workshop. I love building things. The process of creating a
 *Image: "Kent Beck no Workshop Mapping" by [Improve It](https://www.flickr.com/people/8512982@N05) / [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0) / Sourced from [Flickr](https://www.flickr.com/photos/8512982@N05/1574023621/)*
 {{< /greater-bordered-section >}}
 
-{{< greater-bordered-section >}}
+
 
 ### Addendum
 I'm currently seeking opportunities where I can leverage my diverse skillset to contribute to meaningful projects.
 **{{< pagelink "contact" "Reach out" >}}** if interested.
-{{< /greater-bordered-section >}}
+
