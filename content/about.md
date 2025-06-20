@@ -46,8 +46,6 @@ Welcome to my humble workshop. I love building things. The process of creating a
 
 {{< greater-bordered-section >}}
 
-### My Resume
+### Addendum
 I'm currently seeking opportunities where I can leverage my diverse skillset to contribute to meaningful projects.
-
-[Examine CV](/res/doc/JohnNoah.CV.2025.pdf)
-{{< /greater-bordered-section >}}
+**{{< pagelink "contact" "Reach out" >}}** if interested.
